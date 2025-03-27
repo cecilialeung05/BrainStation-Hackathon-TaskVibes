@@ -61,11 +61,11 @@ const TaskHero = () => {
       {showPlayer && (
         <iframe
           width="30%"
-          height="70%"
+          height="100%"
           scrolling="no"
           frameBorder="no"
           allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/723691396&color=%237c5e74&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/lofi_girl/compilation&color=%2344403F&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
           style={{ border: "none", marginTop: "10px" }}
         ></iframe>
         
