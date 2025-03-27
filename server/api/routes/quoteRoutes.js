@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/random", async (_req, res) => {
   try {
-    const response = await axios.get("https://api.quotable.io/quotes/random");
+    const response = await axios.get("http://api.quotable.io/quotes/random");
     if (response.data && response.data.length > 0) {
       res.json(response.data[0]);
     } else {
