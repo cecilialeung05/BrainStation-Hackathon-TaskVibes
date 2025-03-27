@@ -4,12 +4,12 @@ import { fileURLToPath } from "url";
 import "dotenv/config";
 import cors from "cors";
 import quoteRoutes from "./routes/quoteRoutes.js";
+import { createServer } from "http";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({ origin: "http://localhost:5176" }));
-
 app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
@@ -25,6 +25,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(buildPath, "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+
+const server = createServer(app);
+export default server;
