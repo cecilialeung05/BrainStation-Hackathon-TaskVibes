@@ -1,5 +1,5 @@
 import Task from "../../assets/images/Task.png";
-import "./Taskhero.scss";
+import "./TaskHero.scss";
 import React, { useState, useEffect, useRef } from "react";
 
 const TaskHero = () => {
