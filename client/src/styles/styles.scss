@@ -6,15 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Jost", sans-serif;
-  background-color: #d0c3f1;
-}
-
-main {
-  background-color: #d0c3f1;
-}
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -23,9 +14,21 @@ main {
 }
 
 .task-app {
-  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1rem;
   border: 1px solid #b2dfdb;
   border-radius: 6px;
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+    padding: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 960px;
+  }
 }
 
 body {

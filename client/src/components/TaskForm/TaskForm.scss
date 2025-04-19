@@ -1,22 +1,33 @@
 .task-form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
   &__input {
     font-family: "Jost", sans-serif;
     font-size: 1.25rem;
-    padding: 5px;
+    padding: 3px 1rem;
     border: 1px solid;
     border-radius: 4px;
-    margin-left: 20rem;
-    padding-left: 1rem;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 325px;
     &::placeholder {
       color: #2a6a43;
     }
   }
   &__submit {
-    margin-left: 0.5rem;
     border-radius: 4px;
     background-color: #155b53;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
   }
 }

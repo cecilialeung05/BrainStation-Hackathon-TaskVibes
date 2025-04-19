@@ -8,20 +8,20 @@ import TaskList from "./components/TaskList/TaskList";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const API_URL = import.meta.env.VITE_APP_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    axios
-      .get(`${API_URL}quote/random`)
-      .then((response) => {
-        setQuote(response.data);
-      })
-      .catch((error) => {
-        console.log("error is here", error);
-      });
+      axios
+    .get(`${API_URL}/quote/random`)
+    .then((response) => {
+      setQuote(response.data);
+    })
+    .catch((error) => {
+      console.log("error is here", error);
+    });
   }, []);
 
   const [taskList, setTaskList] = useState(() => {
@@ -44,7 +44,7 @@ function App() {
             goal: "Installing necessary packages like NPM",
             isCompleted: true,
           },
-          { id: uid(), goal: "Struggle", isCompleted: true },
+          { id: uid(), goal: "Deploy!", isCompleted: true },
         ];
   });
 

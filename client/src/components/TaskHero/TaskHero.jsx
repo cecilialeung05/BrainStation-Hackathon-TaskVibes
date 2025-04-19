@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const TaskHero = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  // const audioRef = useRef(null);
+  const [username, setUsername] = useState("Username");
   const [showPlayer, setShowPlayer] = useState(false);
 
   useEffect(() => {
@@ -15,15 +15,6 @@ const TaskHero = () => {
     return () => clearInterval(timerId);
   }, []);
 
-  // const handlePlayMusic = () => {
-  //   if (audioRef.current) {
-  //     if (audioRef.current.paused) {
-  //       audioRef.current.play();
-  //     } else {
-  //       audioRef.current.pause();
-  //     }
-  //   }
-  // };
   const handlePlayMusic = () => {
     setShowPlayer(!showPlayer);
   };
@@ -54,7 +45,15 @@ const TaskHero = () => {
         <img src={Task} alt="hero icon" className="hero__icon" />
       </section>
       <section className="hero__content">
-        <h3 className="hero__title">HELLO: Username </h3>
+        <h3 className="hero__title">HELLO:&nbsp;
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Your name"
+            className="inline-username-input"
+          />
+        </h3>
         <p className="hero__date"> {formatDate(currentTime)}</p>
         <p className="hero__time"> {formatTime(currentTime)}</p>
       </section>
